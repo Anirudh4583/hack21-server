@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const auth = require('../middleware/auth')
+const auth = require('../middleware/auth');
 require('dotenv').config()
 
 router.post('/register', async (req,res)=>{
@@ -31,11 +31,11 @@ router.post('/login', async (req,res)=>{
         if(!isMatch)
             throw new Error('Wrong Email/Password');
 
-        const token = jwt.sign({ email: user.email }, process.env.TOKEN_SECRET)
+        const token = jwt.sign({ email: user.email }, process.env.TOKEN_SECRET);
             
         res.status(200).send({
             token
-        })
+        });
 
     }
     catch(e){
