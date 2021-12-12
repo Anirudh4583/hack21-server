@@ -34,7 +34,8 @@ router.post('/login', async (req,res)=>{
         const token = jwt.sign({ email: user.email }, process.env.TOKEN_SECRET);
             
         res.status(200).send({
-            token
+            token,
+            user
         });
 
     }
