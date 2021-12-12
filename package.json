@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,12 +13,18 @@
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "ethers": "^5.5.2",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "ipfs": "^0.60.2",
     "ipfs-core": "^0.12.2",
     "ipfs-http-client": "^54.0.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.1"
+    "mongoose": "^6.1.1",
+    "solc": "^0.8.10",
+    "web3": "^1.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
