@@ -218,7 +218,7 @@ var abi = [
     }
 ];
 
-const contract = new web3.eth.Contract(abi, address)
+const contract = new web3.eth.Contract(abi, address);
 
 const contract_data = async ()=>{
     console.log(contract.methods)
