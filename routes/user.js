@@ -22,7 +22,7 @@ router.post('/login', async (req,res)=>{
     try{
         const user = await User.findOne({
             email : req.body.email
-        })
+        });
 
         if(!user)
             throw new Error('No User Found')
