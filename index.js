@@ -1,16 +1,11 @@
-const IPFS = require('ipfs-core')
+const IPFS = require('ipfs-http-client')
 
 async function main () {
-  const node = await IPFS.create({silent: true})
+  const client = IPFS.create()
 
-  const filesAdded = await node.add({
-    path: 'hello.txt',
-    content: Buffer.from('Hello World 101')
-  })
+  const { cid } = await client.add('Hello world!')
 
-  const fileBuffer = await node.cat(filesAdded[0].hash)
-
-  console.log('Added file contents:', fileBuffer.toString())
+  console.log('Added file contents:', cid)
 
 }
 
