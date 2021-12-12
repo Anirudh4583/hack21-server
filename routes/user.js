@@ -33,6 +33,10 @@ router.post('/login', async (req, res) => {
     res.status(200).send({
       token,
     })
+
+    res.status(200).send({
+      token,
+    })
   } catch (e) {
     res.status(400).json({
       message: e.message,
